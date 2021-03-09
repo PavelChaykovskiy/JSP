@@ -1,76 +1,26 @@
-const people = [
-    { name: 'Pavlo', age: 25, budget: 40000 },
-    { name: 'Piotr', age: 17, budget: 3400 },
-    { name: 'Max', age: 49, budget: 50000 },
-    { name: 'Ola', age: 15, budget: 1800 },
-    { name: 'Jenia', age: 24, budget: 25000 },
-    { name: 'Igor', age: 38, budget: 2300 }
+// Map.js
+
+const obj = {
+    name: 'Pablo',
+    age: 27,
+    job: 'Front-End'
+}
+
+const entries = [
+    ['name', 'Pablo'],
+    ['age', 27],
+    ['job', 'Front-End']
 ]
 
 
-// for (let i = 0; i < people.length; i++) {
-//     console.log(people[i]);
-// }
 
-// for (let person of people) {
-//     console.log(person);
-// }
+// console.table(Object.entries(obj));
+// console.table(Object.fromEntries(entries));
 
+const map = new Map(entries);
 
+// console.log(map.get('job'));
 
-// ForEach 
-// people.forEach(function (person, index, peopleArr) {
-//     console.log(person);
-//     console.log(index);
-//     console.log(peopleArr);
-// })
-
-// people.forEach(el => console.log(el))
-
-
-// Map 
-// const newPeople = people.map(person => `${person.name} (${person.age * 3})`);
-// console.log(newPeople);
-
-// Filter
-
-// const adults = [];
-// for (let i = 0; i < people.length; i++) {
-//     let personAge = people[i].age;
-//     if (personAge >= 21) {
-//         adults.push(people[i])
-//     }
-// }
-// console.log(adults);
-
-
-// const adults = people.filter(person => person.age >= 21)
-// console.log(adults);
-
-// Reduce 
-
-// const personBudget = people.reduce
-
-// let amount = 0;
-// for (let i = 0; i < people.length; i++) {
-//     amount += people[i].budget;
-// }
-
-// console.log(amount);
-
-
-// const amount = people.reduce((total, person) => total + person.budget, 0)
-// console.log(amount);
-
-
-// Find 
-
-// const igor = people.find(person => person.name == 'Igor')
-// const igorIndex = people.findIndex(person => person.name == 'Igor')
-// console.log(igorIndex);
-
-
-
-// =======================================================================
-
-
+map.set('newField', 42)
+    .set(obj, 'Value of object')
+console.log(map);
