@@ -10,9 +10,9 @@
 
   <script>
     const dogs = [{ name: 'Snickers', age: 2 }, { name: 'hugo', age: 8 }];
-
+          const p = document.querySelector('p');
     function makeGreen() {
-      const p = document.querySelector('p');
+
       p.style.color = '#BADA55';
       p.style.fontSize = '50px';
     }
@@ -20,21 +20,22 @@
     // Regular
 
     // Interpolated
-
+console.log('hello I am a %s string!', 'nice');
     // Styled
-
+console.log('%c some text here', 'background: blue');
     // warning!
-
+console.warn('woowww woowww')
     // Error :|
-
+console.error('oohhh my goshh ')
     // Info
-
+console.info('some intrerested note');
     // Testing
-
+console.assert(1 === 2, 'That is wrong');
     // clearing
-
+console.clear();
     // Viewing DOM Elements
 
+    console.dir(p);
     // Grouping together
 
     // counting
