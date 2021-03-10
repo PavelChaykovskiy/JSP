@@ -2,10 +2,10 @@
   "name": "jsconstructor",
   "version": "1.0.0",
   "description": "js constructor application",
-  "main": "src/index.html",
+  "main": "./src/dist/main.html",
   "scripts": {
     "serve": "parcel ./src/index.html -p 4200 --open",
-    "build": "parcel build ./dist/index.html"
+    "build": "parcel build ./src/index.html --dist-dir ./dist"
   },
   "keywords": [
     "js"
@@ -13,6 +13,6 @@
   "author": "Pavlo Chaikovkyi",
   "license": "ISC",
   "devDependencies": {
-    "parcel": "^2.0.0-beta.1"
+    "parcel": "^2.0.0"
   }
 }
