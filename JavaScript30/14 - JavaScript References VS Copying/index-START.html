@@ -8,13 +8,32 @@
 
   <script>
     // start with strings, numbers and booleans
+    // let age = 100
+    // let age2 = age
+    // console.log(age, age2);
+    // age = 200
+    // console.log(age, age2);
 
-    // Let's say we have an array
+    // let name = "Pavlo"
+    // let name2 = name
+
+    // console.log(name, name2);
+    // name = "pablo"
+    // console.log(name, name2);
+
+    // we can change our let - and it will not change another variables 
+
+    // Let's say we have an array   
     const players = ['Wes', 'Sarah', 'Ryan', 'Poppy'];
 
     // and we want to make a copy of it.
 
+    // const team = players; 
+    // console.log(players, team);
     // You might think we can just do something like this:
+    // arays change not only this but also others which was linked from it 
+    // team[3] = 'Lux'
+    // console.log(players, team);
 
     // however what happens when we update that array?
 
@@ -26,12 +45,20 @@
 
     // So, how do we fix this? We take a copy instead!
 
+    
+    const team2 = players.slice();  
     // one way
 
     // or create a new array and concat the old one in
+    const team3 = [].concat(players); 
 
     // or use the new ES6 Spread
 
+    const team4 = [...players]
+    // console.log(team4);
+
+
+    const team5 = Array.from(players) 
     // now when we update it, the original one isn't changed
 
     // The same thing goes for objects, let's say we have a person object
@@ -42,13 +69,33 @@
       age: 80
     };
 
+
+
     // and think we make a copy:
 
     // how do we take a copy instead?
 
+    const cap = Object.assign({}, person, {number: 99, age: 12})
+
     // We will hopefully soon see the object ...spread
 
+    const cap2 = {...cap}
+    // console.log(cap2);
+
     // Things to note - this is only 1 level deep - both for Arrays and Objects. lodash has a cloneDeep method, but you should think twice before using it.
+
+    const pol = {
+      name: 'Pavlo',
+      age: 27,
+      social: {
+        github: 'chaikovskyi',
+        inst: '@chaika'
+      }
+    }
+
+    const dev = Object.assign({}, pol)
+
+    console.log(pol);
 
   </script>
 
