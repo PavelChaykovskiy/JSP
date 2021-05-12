@@ -1,7 +1,7 @@
 export const model = [
     {
         type: 'title',
-        value: 'Hello world from js!!!'
+        value: 'Hello world from js~~~~'
     },
     {
         type: 'text',

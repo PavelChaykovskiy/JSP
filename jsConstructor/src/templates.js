@@ -8,6 +8,7 @@ export function title(block) {
         `
 }
 
+
 export function text(block) {
     return `
               <div class="row">
@@ -21,8 +22,6 @@ export function text(block) {
 }
 
 export function columns(block) {
-
-
     const html = block.value.map(item => `<div class="col-sm"><p>${item}</p></div>`)
 
     console.log(html);
